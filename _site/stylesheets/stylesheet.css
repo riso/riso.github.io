@@ -1,0 +1,59 @@
+#header {
+  background: url('../images/background.jpg')
+}
+.timeline {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 970px;
+  text-align: center;
+  overflow: hidden;
+}
+.timeline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px dotted #444;
+}
+.year {
+  background: red;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  line-height: 50px;
+  clear: both;
+}
+.event {
+  width: 45%;
+  margin: 110px 2.5% 50px 2.5%;
+  border: black solid 2px;
+  border-radius: 5px;
+  float: right;
+  clear: right;
+  position: relative;
+}
+.event:nth-child(2n) {
+  float: left;
+  clear: left;
+  margin-top: 50px;
+}
+.event:after {
+  content: '  ';
+  border: black 2px solid;
+  position: absolute;
+  left: -25px;
+  top: 1.8em;
+  width: 21px;
+}
+.event:nth-child(2n):after {
+  right: -25px;
+  left: auto;
+}
+.glyphicon-calendar {
+  margin-right: 10px;
+}
