@@ -4,6 +4,9 @@ p {
 #header {
   background: url('../images/background.jpg')
 }
+.avatar img {
+  border-radius: 50%;
+}
 .timeline {
   list-style-type: none;
   margin: 0 auto;
@@ -118,6 +121,42 @@ p {
   background: url('../images/liferay.png') no-repeat center;
   background-size: contain;
 }
-.glyphicon-heart, .glyphicon-wrench {
+.backbone {
+  background: url('../images/backbone.png') no-repeat center;
+  background-size: contain;
+}
+.siteminder {
+  background: url('../images/siteminder.png') no-repeat center;
+  background-size: contain;
+}
+.ibm {
+  background: url('../images/ibm.png') no-repeat center;
+  background-size: contain;
+}
+.lconn {
+  background: url('../images/lconn.png') no-repeat center;
+  background-size: contain;
+}
+.wps {
+  background: url('../images/wps.png') no-repeat center;
+  background-size: contain;
+}
+.coursera {
+  background: url('../images/coursera.png') no-repeat center;
+  background-size: contain;
+}
+.polimi {
+  background: url('../images/polimi.png') no-repeat center;
+  background-size: contain;
+}
+.clang {
+  background: url('../images/clang.svg') no-repeat center;
+  background-size: contain;
+}
+.python {
+  background: url('../images/python.png') no-repeat center;
+  background-size: contain;
+}
+.glyphicon-heart, .glyphicon-briefcase, .glyphicon-book, .glyphicon-lock, .glyphicon-star {
   font-size: 32px;
 }
