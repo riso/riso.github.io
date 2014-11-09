@@ -2,10 +2,39 @@ p {
   text-align: justify;
 }
 #header {
-  background: url('../images/background.jpg')
+  /* background: url('../images/background.jpg'); */
+  padding-bottom: 0px;
+}
+#header .heading {
+  margin-top: 80px;
+  text-align: left;
+}
+.avatar {
+  margin: 50px auto;
+  width: 450px;
 }
 .avatar img {
   border-radius: 50%;
+}
+#about-me ul {
+  padding-left: 15px;
+}
+#about-me li {
+  padding-left: 15px;
+  background: url('../images/list-bullet.png') no-repeat 0px 10px;
+  list-style-type: none;
+}
+#map-canvas {
+  height: 300px;
+  margin: 40px 0;
+}
+.heading {
+  margin: 50px auto 20px auto;
+  text-align: center;
+}
+.sub-heading .glyphicon {
+  margin-right: 10px;
+  font-size: inherit;
 }
 .timeline {
   list-style-type: none;
@@ -44,13 +73,6 @@ p {
   clear: right;
   position: relative;
 }
-@media all and (min-width: 992px) {
-  .event {
-    width: 45%;
-    margin: 110px 2.5% 50px 2.5%;
-  }
-}
-
 .event:nth-child(2n) {
   float: left;
   clear: left;
@@ -99,6 +121,10 @@ p {
 }
 .meteor {
   background: url('../images/meteor.png');
+  background-size: cover;
+}
+.gmaps {
+  background: url('../images/gmaps.png');
   background-size: cover;
 }
 .angular {
@@ -160,3 +186,13 @@ p {
 .glyphicon-heart, .glyphicon-briefcase, .glyphicon-book, .glyphicon-lock, .glyphicon-star {
   font-size: 32px;
 }
+@media all and (min-width: 992px) {
+  .event {
+    width: 45%;
+    margin: 110px 2.5% 50px 2.5%;
+  }
+  .address-lines {
+    margin: 40px 0;
+  }
+}
+
