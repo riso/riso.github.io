@@ -1,1 +1,3 @@
-console.log('This would be the main JS file.');
+$(function() {
+	$('[data-toggle="tooltip"]').tooltip({container:'body'});
+});

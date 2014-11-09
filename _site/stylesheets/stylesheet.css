@@ -1,3 +1,6 @@
+p {
+  text-align: justify;
+}
 #header {
   background: url('../images/background.jpg')
 }
@@ -29,14 +32,22 @@
   clear: both;
 }
 .event {
-  width: 45%;
-  margin: 110px 2.5% 50px 2.5%;
+  width: 100%;
+  margin: 30px 0 20px 0;
+  padding: 0 15px 15px 15px;
   border: black solid 2px;
   border-radius: 5px;
   float: right;
   clear: right;
   position: relative;
 }
+@media all and (min-width: 992px) {
+  .event {
+    width: 45%;
+    margin: 110px 2.5% 50px 2.5%;
+  }
+}
+
 .event:nth-child(2n) {
   float: left;
   clear: left;
@@ -56,4 +67,57 @@
 }
 .glyphicon-calendar {
   margin-right: 10px;
+}
+.month {
+  vertical-align: middle;
+}
+.resume-badges {
+   position: relative;
+   float: left;
+   left: 50%;
+}
+.resume-badge, .resume-badge a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  float: left;
+  margin: 0 5px;
+  position: relative;
+  left: -50%
+}
+.resume-badge a {
+  margin: 0;
+  left: 0;
+}
+.github {
+  background: url('../images/GitHub-Mark-120px-plus.png');
+  background-size: cover;
+}
+.meteor {
+  background: url('../images/meteor.png');
+  background-size: cover;
+}
+.angular {
+  background: url('../images/angular.png') no-repeat center;
+  background-size: contain;
+}
+.play {
+  background: url('../images/play.svg') no-repeat center;
+  background-size: contain;
+}
+.scala {
+  background: url('../images/scala.svg') no-repeat center;
+  background-size: contain;
+}
+.java {
+  background: url('../images/java.svg') no-repeat center;
+  background-size: contain;
+}
+.liferay {
+  background: url('../images/liferay.png') no-repeat center;
+  background-size: contain;
+}
+.glyphicon-heart, .glyphicon-wrench {
+  font-size: 32px;
 }

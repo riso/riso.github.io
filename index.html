@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset='utf-8'>
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -17,12 +16,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" href="stylesheets/stylesheet.css">
+<script src="javascripts/main.js"></script>
 
 <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<title>Valerio's Resume</title>
+<title>Valerio's Timeline</title>
 </head>
 
 <body data-spy="scroll" data-target="#main-nav">
@@ -126,37 +126,67 @@
       <li class="event">
       <h3 class="heading">Parka</h3>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>October 2014</span>
-      <p>PARKA</p>
+      <p>A realtime, isomorphic, reactive javascript web application that allows users to share their latest parking location and helps in finding available parkings. My first experience with Meteor.</p>
+      <div class="resume-badges">
+        <span class="resume-badge "><a class="glyphicon glyphicon-heart" href="http://parka.meteor.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Personal project, check it out"></a></span>
+        <span class="resume-badge github"><a href="https://github.com/riso/parka" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Check the source code"></a></span>
+        <span class="resume-badge meteor" data-toggle="tooltip" data-placement="bottom" title="Meteor Framework"></span>
+      </div>
       </li>
       <li class="event">
       <h3 class="heading">Web Architect</h3>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2014 - present</span>
       <p>TBD</p>
+      <div class="resume-badges">
+        <span class="resume-badge glyphicon glyphicon-wrench" data-toggle="tooltip" data-placement="bottom" title="Job"></span>
+        <span class="resume-badge java" data-toggle="tooltip" data-placement="bottom" title="J2EE"></span>
+      </div>
       </li>
       <li class="event">
       <h3 class="heading">Kittybot</h3>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>July 2014</span>
-      <p>KITTYBOT</p>
+      <p>A realtime reactive web application that lets you chat with a cat robot.</p>
+      <div class="resume-badges">
+        <span class="resume-badge "><a class="glyphicon glyphicon-heart" href="http://kitty-bot.herokuapp.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Personal project, check it out"></a></span>
+        <span class="resume-badge github"><a href="https://github.com/riso/kitty-bot" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Check the source code"></a></span>
+        <span class="resume-badge scala" data-toggle="tooltip" data-placement="bottom" title="Scala"></span>
+        <span class="resume-badge play" data-toggle="tooltip" data-placement="bottom" title="Play Framework"></span>
+        <span class="resume-badge angular" data-toggle="tooltip" data-placement="bottom" title="Angular Framework"></span>
+      </div>
       </li>
       <li class="event">
       <h3 class="heading">Senior Web Developer</h3>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>January 2014 - June 2014</span>
       <p>Design and specification of a solution that enables business users to manage the stock portfolio of an Italian insurance company. The designed solution provides a framework for existing and future stock types by defining a common API that stock types should implement, permitting an high grade of flexibility. Led a small team of developers during the implementation, test and release phases of such architecture.</p>
+      <div class="resume-badges">
+        <span class="resume-badge glyphicon glyphicon-wrench" data-toggle="tooltip" data-placement="bottom" title="Job"></span>
+        <span class="resume-badge java" data-toggle="tooltip" data-placement="bottom" title="J2EE"></span>
+        <span class="resume-badge liferay" data-toggle="tooltip" data-placement="bottom" title="Liferay"></span>
+      </div>
       </li>
       <li class="year">2014</li>
       <li class="event">
       <h3 class="heading">Assistant Project Manager</h3>
+      <span class="label label-default">Job</span>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2013 - October 2013</span>
       <p>Coordinated different small teams in the setup of different IBM products (ranging from a stand-alone IBM Connections up to a clusterized IBM Customer Experience Suite), integrating them in existing clients' intranet infrastructures.</p>
       </li>
       <li class="event">
+      <h3 class="heading"><a href="assets/malicious software.pdf" target="_blank">Malicious Software and its Underground Economy</a></h3>
+      <span class="label label-default">Education</span>
+      <span class="label label-default">Coursera</span>
+      <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2013 - September 2013</span>
+      <p>This short graduate-level course introduces students to traditional and mobile malicious software, the security threats it represents, the state-of-the-art analysis and detection techniques, and the underground ecosystem that drives such a profitable but illegal business.</p>
+      </li>
+      <li class="event">
       <h3 class="heading">Web Developer</h3>
+      <span class="label label-default">Job</span>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>January 2013 - September 2013</span>
       <p>Designed and developed web services used to programmatically manage user creation and self care in a enterprise intranet. Later I evolved the solution into a fully scalable and extensible framework that provides user management API for multiple user backends (LDAP, DB, etc.) and which is currently used by serveral clients to provide a simple user management interface to business users. Development and maintenance of CMS structures for content editors, installation and setup of software infrastracture (based off IBM products).</p>
       </li>
-      <li class="year">2013</li>
       <li class="event">
       <h3 class="heading">Web Developer</h3>
+      <span class="label label-default">Job</span>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>Febraury 2012 - November 2012</span>
       <p>Internet Banking portal solution (multi-language platform with about 750k users). Development and maintenance of the aggregation platform (based on IBM technologies) which provides a single point of access both for users and CMS editors toward multiple backend systems. The job involved technical analisys of requirements, technical solution specification, design, development and deployment.</p>
       <figure>
@@ -166,9 +196,11 @@
       <li class="year">2012</li>
       <li class="event">
       <h3 class="heading">Politecnico di Milano</h3>
-      <h4 class="heading">Parallel scalable parsing with Floyd Grammars</h4>
+      <h4 class="heading"><a href="http://www.hipeac.net/system/files/lr_3553_hipeac_nb-26-v3-bookmarks.pdf" data-toggle="tooltip" data-placement="bottom" title="The thesis was part of a research program that won a Google Research Award (page 8)">Parallel scalable parsing with Floyd Grammars</a></h4>
+      <span class="label label-default">Education</span>
+      <span class="label label-default">University</span>
       <span class="month"><span class="glyphicon glyphicon-calendar"></span>October 2006 - December 2011</span>
-      <p>Bachelor's and master's degree in Computer Engineering. The thesis was part of a research program that won a <a href="http://www.hipeac.net/system/files/lr_3553_hipeac_nb-26-v3-bookmarks.pdf">Google Research Award (page 8)</a></p>
+      <p>Bachelor's and master's degree in Computer Engineering.</p>
       </li>
     </ul>
 
