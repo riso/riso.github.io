@@ -1,8 +1,27 @@
+body {
+  background-color: #CADAEB;
+}
+.navbar {
+  background-image: linear-gradient(to bottom,#4B5E74 0,#4B5E74 100%);
+}
+.navbar-default .navbar-nav>li>a {
+  color: #CADAEB;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: #eee;
+}
+#resume {
+  background-color: #607A97;
+}
+#resume .heading, #resume .year {
+  color: #eee;
+}
 p {
   text-align: justify;
 }
 #header {
-  /* background: url('../images/background.jpg'); */
+  background: url('../images/background.jpg');
+  background-size: cover;
   padding-bottom: 0px;
 }
 #header .heading {
@@ -11,9 +30,10 @@ p {
 }
 .avatar {
   margin: 50px auto;
-  width: 450px;
+  max-width: 450px;
 }
 .avatar img {
+  border: 20px;
   border-radius: 50%;
 }
 #about-me ul {
@@ -38,24 +58,16 @@ p {
 }
 .timeline {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   padding: 0;
   position: relative;
   max-width: 970px;
   text-align: center;
   overflow: hidden;
-}
-.timeline:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  border-left: 2px dotted #444;
+  background: url('../images/vertical-line.png') repeat-y 50% 0;
 }
 .year {
-  background: red;
+  background: #4B5E74;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -65,9 +77,10 @@ p {
 }
 .event {
   width: 100%;
+  background-color: #CADAEB;
   margin: 30px 0 20px 0;
   padding: 0 15px 15px 15px;
-  border: black solid 2px;
+  border: #4B5E74 solid 2px;
   border-radius: 5px;
   float: right;
   clear: right;
@@ -80,7 +93,7 @@ p {
 }
 .event:after {
   content: '  ';
-  border: black 2px solid;
+  border: #4B5E74 2px solid;
   position: absolute;
   left: -25px;
   top: 1.8em;
@@ -97,9 +110,9 @@ p {
   vertical-align: middle;
 }
 .resume-badges {
-   position: relative;
-   float: left;
-   left: 50%;
+  position: relative;
+  float: left;
+  left: 50%;
 }
 .resume-badge, .resume-badge a {
   display: inline-block;
