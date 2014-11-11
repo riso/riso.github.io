@@ -1,6 +1,12 @@
 body {
   background-color: #CADAEB;
 }
+p {
+  text-align: justify;
+}
+h2 {
+  font-size: 50px;
+}
 .navbar {
   background-image: linear-gradient(to bottom,#4B5E74 0,#4B5E74 100%);
 }
@@ -16,8 +22,8 @@ body {
 #resume .heading, #resume .year {
   color: #eee;
 }
-p {
-  text-align: justify;
+#header, #about-me, #about-me {
+  border-bottom: #e7e7e7 solid 1px;
 }
 #header {
   background: url('../images/background.jpg');
@@ -35,6 +41,9 @@ p {
 .avatar img {
   border: 20px;
   border-radius: 50%;
+}
+#about-me .container {
+  margin-bottom: 50px;
 }
 #about-me ul {
   padding-left: 15px;
@@ -122,11 +131,28 @@ p {
   float: left;
   margin: 0 5px;
   position: relative;
-  left: -50%
+  left: -50%;
+  color: #4B5E74;
 }
 .resume-badge a {
   margin: 0;
   left: 0;
+}
+.glow {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  box-shadow: 0 0 7px 14px #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+#resume .github {
+  position: absolute;
+  width: 32px;
+  height: 32px;
 }
 .github {
   background: url('../images/GitHub-Mark-120px-plus.png');
@@ -145,15 +171,15 @@ p {
   background-size: contain;
 }
 .play {
-  background: url('../images/play.svg') no-repeat center;
+  background: url('../images/play.png') no-repeat center;
   background-size: contain;
 }
 .scala {
-  background: url('../images/scala.svg') no-repeat center;
+  background: url('../images/scala.png') no-repeat center;
   background-size: contain;
 }
 .java {
-  background: url('../images/java.svg') no-repeat center;
+  background: url('../images/java.png') no-repeat center;
   background-size: contain;
 }
 .liferay {
@@ -189,7 +215,7 @@ p {
   background-size: contain;
 }
 .clang {
-  background: url('../images/clang.svg') no-repeat center;
+  background: url('../images/clang.png') no-repeat center;
   background-size: contain;
 }
 .python {
@@ -198,6 +224,22 @@ p {
 }
 .glyphicon-heart, .glyphicon-briefcase, .glyphicon-book, .glyphicon-lock, .glyphicon-star {
   font-size: 32px;
+}
+.glyphicon-heart:before, #resume .glyphicon-briefcase:before, .glyphicon-book:before, .glyphicon-lock:before, .glyphicon-star:before {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+}
+.glyphicon-heart:before {
+  left: -1px;
+}
+.glyphicon-star:before {
+  left: 1px;
+}
+.contact-badge, .contact-badge a {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 @media all and (min-width: 992px) {
   .event {
