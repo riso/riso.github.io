@@ -1,0 +1,22 @@
+{
+  "name": "riso.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/riso/riso.github.io",
+  "authors": [
+    "Valerio Ponte <valerio.ponte@gmail.com>"
+  ],
+  "description": "Resume for Valerio Ponte in a timeline style",
+  "main": "javascripts/main.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.9"
+  }
+}

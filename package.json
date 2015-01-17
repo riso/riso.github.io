@@ -1,0 +1,27 @@
+{
+  "name": "riso.github.io",
+  "version": "0.0.0",
+  "description": "Resume for Valerio Ponte in a timeline style",
+  "main": "javascripts/main.js",
+  "dependencies": {
+    "google-cdn-data": "^0.1.16",
+    "gulp": "^3.8.10",
+    "gulp-bower": "^0.0.10",
+    "gulp-google-cdn": "^2.0.0"
+  },
+  "devDependencies": {
+    "google-cdn": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riso/riso.github.io.git"
+  },
+  "author": "Valerio Ponte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/riso/riso.github.io/issues"
+  }
+}
