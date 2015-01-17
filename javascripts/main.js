@@ -24,5 +24,8 @@ var gmaps = {
 			map: gmaps.map
 		});
 	}
-}
+};
+
 google.maps.event.addDomListener(window, 'load', gmaps.initialize);
+
+var resume = angular.module('resume', []);
