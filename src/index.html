@@ -131,13 +131,27 @@
     <section class="section resume" id="resume">
       <div class="container">
         <h2 class="heading">RESUME</h2>
-        <select ng-model="experience">
-          <option value="work">Work</option> 
-          <option value="personal">Personal</option> 
-        </select>
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <label class="row">
+              <input type="checkbox" ng-model="work"> Work
+            </label>
+          </div>
+          <div class="col-md-4 text-center">
+            <label class="row">
+              <div class="col-xs-2"><input type="checkbox" ng-model="personal"></div>
+              <div class="col-xs-10"><i class="glyphicon glyphicon-heart" ></i><div>Personal projects</div></div>
+            </label>
+          </div>
+          <div class="col-md-4 text-center">
+            <label>
+              <input type="checkbox" ng-model="education"> Education
+            </label>
+          </div>
+        </div>
         <ul class="timeline">
           <li class="year">2015</li>
-          <li class="event" ng-show="experience == 'work'">
+          <li class="event" ng-show="work">
             <h3 class="sub-heading">Parka</h3>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>October 2014</span>
             <p>A realtime, isomorphic, reactive javascript web application that 

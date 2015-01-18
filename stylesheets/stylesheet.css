@@ -112,7 +112,7 @@ h2 {
   right: -25px;
   left: auto;
 }
-.glyphicon-calendar {
+.event $1calendar {
   margin-right: 10px;
 }
 .month {
@@ -225,15 +225,15 @@ h2 {
 .glyphicon-heart, .glyphicon-briefcase, .glyphicon-book, .glyphicon-lock, .glyphicon-star {
   font-size: 32px;
 }
-.glyphicon-heart:before, #resume .glyphicon-briefcase:before, .glyphicon-book:before, .glyphicon-lock:before, .glyphicon-star:before {
+.event .glyphicon-heart:before, #resume .event .glyphicon-briefcase:before, .event .glyphicon-book:before, .event .glyphicon-lock:before, .event .glyphicon-star:before {
   z-index: 1;
   position: absolute;
   left: 0;
 }
-.glyphicon-heart:before {
+.event .glyphicon-heart:before {
   left: -1px;
 }
-.glyphicon-star:before {
+.event .glyphicon-star:before {
   left: 1px;
 }
 .contact-badge, .contact-badge a {
