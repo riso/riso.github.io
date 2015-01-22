@@ -28,4 +28,4 @@ var gmaps = {
 
 google.maps.event.addDomListener(window, 'load', gmaps.initialize);
 
-var resume = angular.module('resume', []);
+var resume = angular.module('resume', ['ngAnimate']);

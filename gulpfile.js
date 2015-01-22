@@ -6,6 +6,7 @@ gulp.task('cdnizer', function() {
   gulp.src("./src/index.html")
   .pipe(cdnizer([
     'google:angular',
+    'google:angular-animate',
     'cdnjs:jquery',
     {
       file: '**/bootstrap/**/*.css',
