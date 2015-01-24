@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="resume">
+<html ng-app="timeline">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -132,26 +132,11 @@
     <section class="section resume" id="resume">
       <div class="container">
         <h2 class="heading">RESUME</h2>
-        <div class="row experience-selector">
-          <div class="col-md-4 text-center">
-            <label>
-              <div class="col-xs-2 col-middle-alt"><input type="checkbox" ng-model="work"></div>
-              <div class="col-xs-7 col-middle-alt"><i class="glyphicon glyphicon-briefcase" ></i><div>Work experiences</div></div>
-            </label>
-          </div>
-          <div class="col-md-4 text-center">
-            <label>
-              <div class="col-xs-2 col-middle-alt"><input type="checkbox" ng-model="personal"></div>
-              <div class="col-xs-7 col-middle-alt"><i class="glyphicon glyphicon-heart" ></i><div>Personal projects</div></div>
-            </label>
-          </div>
-          <div class="col-md-4 text-center">
-            <label>
-              <div class="col-xs-2 col-middle-alt"><input type="checkbox" ng-model="education"></div>
-              <div class="col-xs-7 col-middle-alt"><i class="glyphicon glyphicon-book" ></i><div>Education & learning</div></div>
-            </label>
-          </div>
-        </div>
+        <experiences-selector>
+          <experience-type label="Work experiences" icon="glyphicon-briefcase"></experience-type>
+          <experience-type label="Personal projects" icon="glyphicon-heart"></experience-type>
+          <experience-type label="Education & learning" icon="glyphicon-book"></experience-type>
+        </experiences-selector>
         <ul class="timeline">
           <li class="year">2015</li>
           <li class="event animate-show" ng-show="personal || (!work && !personal && !education)">
