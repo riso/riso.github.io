@@ -8,6 +8,7 @@ gulp.task('cdnizer', function() {
     'google:angular',
     'google:angular-animate',
     'cdnjs:jquery',
+    'jsdelivr:lodash',
     {
       file: '**/bootstrap/**/*.css',
       package: 'bootstrap',
