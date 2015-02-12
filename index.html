@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script><script>if(!(window.angular)) cdnizerLoad("bower_components/angular/angular.js");</script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-animate.min.js"></script>
+    <script src="//cdn.jsdelivr.net/lodash/3.0.0/lodash.min.js"></script><script>if(!(window._)) cdnizerLoad("bower_components/lodash/lodash.js");</script>
     <script src="javascripts/main.js"></script>
 
     <!--[if lt IE 9]>
@@ -129,17 +130,17 @@
     <!-- end about-me -->
 
     <!-- resume -->
-    <section class="section resume" id="resume">
+    <experiences>
       <div class="container">
         <h2 class="heading">RESUME</h2>
-        <experiences-selector>
-          <experience-type label="Work experiences" icon="glyphicon-briefcase"></experience-type>
-          <experience-type label="Personal projects" icon="glyphicon-heart"></experience-type>
-          <experience-type label="Education & learning" icon="glyphicon-book"></experience-type>
-        </experiences-selector>
+        <div class="row experience-selector">
+          <experience-type type="{type: 'work', label: 'Work experiences', icon: 'glyphicon-briefcase', checked: false}"></experience-type>
+          <experience-type type="{type: 'personal', label: 'Personal projects', icon: 'glyphicon-heart', checked: false}"></experience-type>
+          <experience-type type="{type: 'education', label: 'Education & learning', icon: 'glyphicon-book', checked: false}"></experience-type>
+        </div>
         <ul class="timeline">
           <li class="year">2015</li>
-          <li class="event animate-show" ng-show="personal || (!work && !personal && !education)">
+          <event type="personal">
             <h3 class="sub-heading">Parka</h3>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>October 2014</span>
             <p>A realtime, isomorphic, reactive javascript web application that 
@@ -151,8 +152,8 @@
               <span class="resume-badge meteor" data-toggle="tooltip" data-placement="bottom" title="Meteor Framework"></span>
               <span class="resume-badge gmaps" data-toggle="tooltip" data-placement="bottom" title="Google Maps API"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="work || (!work && !personal && !education)">
+          </event>
+          <event type="work">
             <h3 class="sub-heading">Web Architect</h3>
             <span>Wintech S.p.A.</span>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2014 - present</span>
@@ -169,8 +170,8 @@
               <span class="resume-badge lconn" data-toggle="tooltip" data-placement="bottom" title="IBM Connections"></span>
               <span class="resume-badge wps" data-toggle="tooltip" data-placement="bottom" title="IBM WebSphere Portal"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="personal || (!work && !personal && !education)">
+          </event>
+          <event type="personal">
             <h3 class="sub-heading">Kittybot</h3>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>July 2014</span>
             <p>A realtime reactive web application that lets you chat with a robot cat.</p>
@@ -181,8 +182,8 @@
               <span class="resume-badge play" data-toggle="tooltip" data-placement="bottom" title="Play Framework"></span>
               <span class="resume-badge angular" data-toggle="tooltip" data-placement="bottom" title="Angular Framework"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="work || (!work && !personal && !education)">
+          </event>
+          <event type="work">
             <h3 class="sub-heading">Senior Web Developer</h3>
             <span>Wintech S.p.A.</span>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>January 2014 - June 2014</span>
@@ -199,9 +200,9 @@
               <span class="resume-badge backbone" data-toggle="tooltip" data-placement="bottom" title="Backbone.js"></span>
               <span class="resume-badge siteminder" data-toggle="tooltip" data-placement="bottom" title="CA Siteminder"></span>
             </div>
-          </li>
+          </event>
           <li class="year">2014</li>
-          <li class="event animate-show" ng-show="work || (!work && !personal && !education)">
+          <event type="work">
             <h3 class="sub-heading">Assistant Project Manager</h3>
             <span>Wintech S.p.A.</span>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2013 - October 2013</span>
@@ -214,8 +215,8 @@
               <span class="resume-badge lconn" data-toggle="tooltip" data-placement="bottom" title="IBM Connections"></span>
               <span class="resume-badge wps" data-toggle="tooltip" data-placement="bottom" title="IBM WebSphere Portal"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="education || (!work && !personal && !education)">
+          </event>
+          <event type="education">
             <h3 class="sub-heading">Malicious Software and its Underground Economy</h3>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>June 2013 - September 2013</span>
             <p>This short graduate-level course introduces students to traditional 
@@ -226,8 +227,8 @@
               <span class="resume-badge"><div class="glow"></div><a class="glyphicon glyphicon-book" data-toggle="tooltip" data-placement="bottom" title="Education, download Statement of Accomplishment" href="assets/malicious software.pdf" target="_blank"></a></span>
               <span class="resume-badge coursera" data-toggle="tooltip" data-placement="bottom" title="Coursera"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="work || (!work && !personal && !education)">
+          </event>
+          <event type="work">
             <h3 class="sub-heading">Web Developer</h3>
             <span>Wintech S.p.A.</span>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>Febraury 2012 - November 2012</span>
@@ -243,8 +244,8 @@
               <span class="resume-badge ibm" data-toggle="tooltip" data-placement="bottom" title="IBM"></span>
               <span class="resume-badge wps" data-toggle="tooltip" data-placement="bottom" title="IBM WebSphere Portal"></span>
             </div>
-          </li>
-          <li class="event animate-show" ng-show="work || (!work && !personal && !education)">
+          </event>
+          <event type="work">
             <h3 class="sub-heading">Web Developer</h3>
             <span>Wintech S.p.A.</span>
             <span class="month"><span class="glyphicon glyphicon-calendar"></span>January 2013 - September 2013</span>
@@ -263,9 +264,9 @@
               <span class="resume-badge wps" data-toggle="tooltip" data-placement="bottom" title="IBM WebSphere Portal"></span>
               <span class="resume-badge glyphicon glyphicon-lock" data-toggle="tooltip" data-placement="bottom" title="IBM Security Access Manager"></span>
             </div>
-          </li>
+          </event>
           <li class="year">2012</li>
-          <li class="event animate-show" ng-show="education || (!work && !personal && !education)">
+          <event type="education">
             <h3 class="sub-heading">Politecnico di Milano</h3>
             <h4>Parallel scalable parsing with Floyd Grammars</a></h4>
           <span class="month"><span class="glyphicon glyphicon-calendar"></span>October 2006 - December 2011</span>
@@ -279,11 +280,11 @@
             <span class="resume-badge java" data-toggle="tooltip" data-placement="bottom" title="Java"></span>
             <span class="resume-badge python" data-toggle="tooltip" data-placement="bottom" title="Python"></span>
           </div>
-        </li>
+        </event>
       </ul>
 
     </div>
-  </section>
+  </experiences>
   <!-- end resume -->
 
   <!-- contacts -->
@@ -321,19 +322,19 @@
 
   <script>
     (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
         (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-56382505-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-56382505-1', 'auto');
+        ga('send', 'pageview');
   </script>
 </body>
 

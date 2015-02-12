@@ -32,50 +32,67 @@ google.maps.event.addDomListener(window, 'load', gmaps.initialize);
 
 var timeline = angular.module('timeline', ['ngAnimate']);
 
-timeline.directive('experiencesSelector', [function() {
+timeline.directive('experiences', function() {
 	return {
-		transclude: true,
-		scope: {},
-		controller: function($scope, $element) {
-			var types = $scope.types = [];
-
-			$scope.checked = function(type) {
-				type.checked = true;
-			};
-
+	restrict: 'E',
+	transclude: true,
+	controller: function($scope) {
+			this.types = $scope.types = [];
+			
 			this.addType = function(type) {
-				types.push(type);
+				$scope.types.push(type);
 			};
-		},
-		template: 
-			'<div class="row experience-selector">' +
-				'<div class="col-md-4 text-center" ng-repeat="type in types">' +
-					'<label>' +
-						'<div class="col-xs-2 col-middle-alt">' +
-							'<input type="checkbox" ng-click="checked(type)">' + 
-						'</div>' +
-						'<div class="col-xs-7 col-middle-alt">' + 
-							'<i class="glyphicon {{type.icon}}" ></i>' +
-							'<div>{{type.label}}</div>' + 
-						'</div>' +
-					'</label>' +
-				'</div>' +
-				'<ng-transclude></ng-transclude>' +
-			'</div>',
-		replace: true
+
+			this.visible = function(type) {
+				var anySelected = _.reduce($scope.types, function(acc, t){
+					return acc || t.checked;
+				}, false);
+				if (!anySelected) return true;
+				return _.result(_.find($scope.types, function(t){
+					return t.type === type.type;
+					}), 'checked');
+			};
+	},
+	controllerAs: 'exps',
+	template: '<section class="section resume" id="resume" ng-transclude></section>'
 	};
-}]);
+});
 
 timeline.directive('experienceType', [function() {
 	return {
-		require: '^experiencesSelector',
+		require: '^experiences',
 		scope: {
-			label: '@',
-			icon: '@'
+			type: "="
 		},
-		link: function(scope, element, attrs, experiencesSelectorCtrl) {
-			experiencesSelectorCtrl.addType(scope);
+		link: function(scope, element, attrs, ctrl) {
+			ctrl.addType(scope.type);
 		},
+		template: 
+			'<div class="col-md-4 text-center">' +
+				'<label>' +
+					'<div class="col-xs-2 col-middle-alt">' +
+						'<input type="checkbox" ng-model="type.checked">' + 
+					'</div>' +
+					'<div class="col-xs-7 col-middle-alt">' + 
+						'<i class="glyphicon {{type.icon}}" ></i>' +
+						'<div>{{type.label}}</div>' + 
+					'</div>' +
+				'</label>' +
+			'</div>'
+	};
+}]);
+
+timeline.directive('event', [function() {
+	return {
+		require: '^experiences',
+		scope: {
+			type: "@"
+		},
+		transclude: true, 
+		link: function(scope, element, attrs, ctrl) {
+			scope.visible = ctrl.visible;
+		},
+		template: '<li class="event animate-show" ng-show="visible({type: type})" ng-transclude></li>',
 		replace: true
 	};
 }]);
