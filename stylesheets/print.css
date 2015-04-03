@@ -212,6 +212,10 @@ footer a {
   color: #666;
 }
 
+section {
+  page-break-after: always;
+}
+
 /* MISC */
 .clearfix:after {
   clear: both;
@@ -225,6 +229,14 @@ footer a {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+#header .heading {
+  margin-top: 0;
+}
+
+.avatar {
+  display: none;
+}
+
 .experience-selector {
   display: none;
 }
@@ -232,6 +244,11 @@ footer a {
 ul.timeline li {
   width: 100%;
   padding-left: 0;
+  list-style: none;
+}
+
+.year {
+  display: none;
 }
 
 .timeline a[href]:after {
@@ -242,6 +259,7 @@ ul.timeline li {
   border: none;
   padding: 0;
   margin: 0 0 30px 0;
+  page-break-inside: avoid;
 }
 
 .event:nth-child(2n) {
