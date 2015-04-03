@@ -16,6 +16,13 @@ h2 {
 .navbar-default .navbar-nav>li>a:hover {
   color: #eee;
 }
+.btn-primary {
+  background: linear-gradient(to bottom,#4B5E74 0,#4B5E74 100%);
+  border-color: #e7e7e7;
+}
+.btn-primary:focus {
+  border-color: rgb(51, 51, 51);
+}
 #resume {
   background-color: #607A97;
 }

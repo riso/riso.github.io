@@ -233,6 +233,10 @@ section {
   margin-top: 0;
 }
 
+.btn {
+  display: none;
+}
+
 .avatar {
   display: none;
 }
