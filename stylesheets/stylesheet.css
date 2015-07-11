@@ -169,6 +169,10 @@ h2 {
   background: url('../images/gmail.png');
   background-size: cover;
 }
+.linkedin {
+  background: url('../images/linkedin.png');
+  background-size: cover;
+}
 .skype {
   background: url('../images/skype.png');
   background-size: cover;

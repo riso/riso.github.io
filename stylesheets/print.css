@@ -273,6 +273,7 @@ ul.timeline li {
   display: block;
   width: inherit;
   height: inherit;
+  margin: 0;
 }
 
 .resume-badge {
