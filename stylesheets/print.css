@@ -269,8 +269,10 @@ ul.timeline li {
   margin-top: 0;
 }
 
-.contact-badge {
+.contact-badge,.contact-badge a {
   display: block;
+  width: inherit;
+  height: inherit;
 }
 
 .resume-badge {
