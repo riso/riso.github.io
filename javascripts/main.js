@@ -34,11 +34,11 @@ var timeline = angular.module('timeline', ['ngAnimate']);
 
 timeline.directive('experiences', function() {
 	return {
-	restrict: 'E',
-	transclude: true,
-	controller: function($scope) {
+		restrict: 'E',
+		transclude: true,
+		controller: function($scope) {
 			this.types = $scope.types = [];
-			
+
 			this.addType = function(type) {
 				$scope.types.push(type);
 			};
@@ -50,11 +50,11 @@ timeline.directive('experiences', function() {
 				if (!anySelected) return true;
 				return _.result(_.find($scope.types, function(t){
 					return t.type === type.type;
-					}), 'checked');
+				}), 'checked');
 			};
-	},
-	controllerAs: 'exps',
-	template: '<section class="section resume" id="resume" ng-transclude></section>'
+		},
+		controllerAs: 'exps',
+		template: '<section class="section resume" id="resume" ng-transclude></section>'
 	};
 });
 
@@ -69,15 +69,15 @@ timeline.directive('experienceType', [function() {
 		},
 		template: 
 			'<div class="col-md-4 text-center">' +
-				'<label>' +
-					'<div class="col-xs-2 col-middle-alt">' +
-						'<input type="checkbox" ng-model="type.checked">' + 
-					'</div>' +
-					'<div class="col-xs-7 col-middle-alt">' + 
-						'<i class="glyphicon {{type.icon}}" ></i>' +
-						'<div>{{type.label}}</div>' + 
-					'</div>' +
-				'</label>' +
+			'<label>' +
+			'<div class="col-xs-2 col-middle-alt">' +
+			'<input type="checkbox" ng-model="type.checked">' + 
+			'</div>' +
+			'<div class="col-xs-7 col-middle-alt">' + 
+			'<i class="glyphicon {{type.icon}}" ></i>' +
+			'<div>{{type.label}}</div>' + 
+			'</div>' +
+			'</label>' +
 			'</div>'
 	};
 }]);

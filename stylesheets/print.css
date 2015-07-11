@@ -48,11 +48,6 @@ body {
   color: #000;
 }
 
-a {
-  color: #d5000d;
-  font-weight: bold;
-}
-
 header {
   padding-top: 35px;
   padding-bottom: 10px;
@@ -241,6 +236,10 @@ section {
   display: none;
 }
 
+#about-me li {
+  list-style: disc inside;
+}
+
 .experience-selector {
   display: none;
 }
@@ -270,14 +269,18 @@ ul.timeline li {
   margin-top: 0;
 }
 
+.contact-badge {
+  display: block;
+}
+
 .resume-badge {
   position: inherit;
   float: none;
   width: inherit;
 }
 
-.resume-badge:after {
-  content: attr(data-original-title);
+.resume-badge:after,.contact-badge a:after {
+  content: attr(data-print);
 }
 
 .event:after {

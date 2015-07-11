@@ -165,6 +165,14 @@ h2 {
   background: url('../images/GitHub-Mark-120px-plus.png');
   background-size: cover;
 }
+.gmail {
+  background: url('../images/gmail.png');
+  background-size: cover;
+}
+.skype {
+  background: url('../images/skype.png');
+  background-size: cover;
+}
 .puppet {
   background: url('../images/puppet.png');
   background-size: cover;
@@ -264,9 +272,10 @@ h2 {
   left: 1px;
 }
 .contact-badge, .contact-badge a {
-  display: block;
+  display: inline-block;
   width: 24px;
   height: 24px;
+  margin: 0 4px;
 }
 @media all and (min-width: 992px) {
   .event {
