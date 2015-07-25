@@ -106,7 +106,8 @@ timeline.directive('event', [function() {
 		link: function(scope, element, attrs, ctrl) {
 			scope.visible = ctrl.visible;
 		},
-		template: '<li class="event animate-show" ng-show="visible({type: type})" ng-transclude></li>',
+		template: 
+			'<li class="event animate-show" ng-show="visible({type: type})" ><div class="event-content" ng-transclude></div></li>',
 		replace: true
 	};
 }]);

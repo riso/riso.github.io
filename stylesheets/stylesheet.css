@@ -323,16 +323,19 @@ label {
   cursor: pointer;
 }
 
-.animate-show {
-  opacity: 1;
-}
-
 .animate-show.ng-hide-add.ng-hide-add-active,
 .animate-show.ng-hide-remove.ng-hide-remove-active {
-  -webkit-transition: all linear 0.5s;
-  transition: all linear 0.5s;
+  transition: all ease-in 1s;
 }
 
 .animate-show.ng-hide {
-  opacity: 0;
+  margin: 0 2.5% 0 2.5%;
+}
+.event-content {
+  max-height: 500px;
+  overflow: hidden;
+  transition: all ease-in 1s;
+}
+.animate-show.ng-hide .event-content {
+  max-height: 0;
 }
