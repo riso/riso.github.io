@@ -16,6 +16,20 @@ h2 {
 .navbar-default .navbar-nav>li>a:hover {
   color: #eee;
 }
+#main-nav {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: -webkit-transform .3s,height .2s linear;
+  -moz-transition: -moz-transform .3s,height .2s linear;
+  -o-transition: transform .3s,height .2s linear;
+  transition: transform .3s,height .2s linear;
+}
+#main-nav.asleep {
+  -webkit-transform: translate3d(0,-70px,0);
+  -moz-transform: translate3d(0,-70px,0);
+  transform: translate3d(0,-70px,0);
+}
 .btn-primary {
   background: linear-gradient(to bottom,#4B5E74 0,#4B5E74 100%);
   border-color: #e7e7e7;
@@ -24,9 +38,9 @@ h2 {
   border-color: rgb(51, 51, 51);
 }
 #resume {
-  background-color: #607A97;
+  background-color: #eee;
 }
-#resume .heading, #resume .year {
+#resume .year {
   color: #eee;
 }
 #header, #about-me, #about-me {

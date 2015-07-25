@@ -2,6 +2,20 @@ $(function() {
 	$('[data-toggle="tooltip"]').tooltip({
 		container: 'body'
 	});
+	var previousScroll = 0;
+	$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		if (currentScroll > 70) {
+			if (currentScroll > previousScroll) {
+				$('#main-nav').addClass('asleep');
+			} else {
+				$('#main-nav').removeClass('asleep');
+			}
+		} else {
+			$('#main-nav').removeClass('asleep');
+		}
+		previousScroll = currentScroll;
+	});
 });
 
 var gmaps = {
