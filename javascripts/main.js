@@ -24,7 +24,7 @@ var gmaps = {
 	me: null,
 
 	initialize: function() {
-		gmaps.me = new google.maps.LatLng(45.5030792, 9.1766231);
+		gmaps.me = new google.maps.LatLng(45.5154558, 9.2087056);
 
 		var mapOptions = {
 			zoom: 8,
